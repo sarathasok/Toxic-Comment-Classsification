@@ -1,4 +1,4 @@
-GRP 22 TOXIC COMMENT CLASSIFIER COURSEWORK:
+TOXIC COMMENT CLASSIFIER COURSEWORK:
 
 Objective:
 Build a Toxic Comments Classifier using Natural Language Processing (NLP)
