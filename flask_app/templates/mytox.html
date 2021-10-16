@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><h1>Toxic_Comment_classifier</h1></title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+.button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  .button:hover {opacity: 1}
+.center {
+  text-align: center;
+  padding: 70px 0;
+}
+.transbox {
+  opacity: 0.4;
+}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://i.postimg.cc/gjf3KMX0/Microsoft-Teams-image.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  
+}
+</style>
+<body onload="myFunction()">
+<div class="bgimg w3-display-container w3-text-white">
+<div class="center">
+<h1 style="color:black"><b>Toxic Comment Classifier</b></h1>
+<form id ="myForm" action="{{ url_for('predict')}}" method="post" action="/form1">
+            <h2 style="color:black"><b>Enter a comment to check its toxicity!</b></h2>
+			<div class="col-12 in ml-sm-7">
+			<div class="transbox">
+                    <input id='text' type="text" name="text" placeholder="Enter your comment" required="required" size="37" style="font-size:25px;"/>
+                </div>
+				</div>
+				
+                    <div class="col-12 bt">
+                    <button id='button' type="submit" class="button"> Predict</button>
+					<div class="row op">
+            <h3 style="color:red">{{ pred_tox }} <br><br>
+                {{ pred_sev }} <br><br>
+                {{ pred_obs }} <br><br>
+                {{ pred_ins }} <br><br>
+                {{ pred_thr }} <br><br>
+                {{ pred_ide }}</h3>
+
+</div>
+
+                </div>
+</form>
+             
+   
+</div>
+
+
+</div>
+
+</body>
+</html>
